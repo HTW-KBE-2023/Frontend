@@ -1,0 +1,85 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Git Repositories\\Frontend\\wwwroot\\css\\motronic.css",
+      "PackagePath": "staticwebassets\\css\\motronic.css"
+    },
+    {
+      "Id": "D:\\Git Repositories\\Frontend\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Git Repositories\\Frontend\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Git Repositories\\Frontend\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "D:\\Git Repositories\\Frontend\\wwwroot\\images\\Argo-C.png",
+      "PackagePath": "staticwebassets\\images\\Argo-C.png"
+    },
+    {
+      "Id": "D:\\Git Repositories\\Frontend\\wwwroot\\images\\Argo.png",
+      "PackagePath": "staticwebassets\\images\\Argo.png"
+    },
+    {
+      "Id": "D:\\Git Repositories\\Frontend\\wwwroot\\images\\brand.png",
+      "PackagePath": "staticwebassets\\images\\brand.png"
+    },
+    {
+      "Id": "D:\\Git Repositories\\Frontend\\wwwroot\\libs\\font-awesome\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\libs\\font-awesome\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "D:\\Git Repositories\\Frontend\\wwwroot\\libs\\font-awesome\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\libs\\font-awesome\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "D:\\Git Repositories\\Frontend\\wwwroot\\libs\\font-awesome\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\libs\\font-awesome\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "D:\\Git Repositories\\Frontend\\wwwroot\\libs\\font-awesome\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\libs\\font-awesome\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "D:\\Git Repositories\\Frontend\\wwwroot\\libs\\font-awesome\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\libs\\font-awesome\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "D:\\Git Repositories\\Frontend\\wwwroot\\libs\\font-awesome\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\libs\\font-awesome\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "D:\\Git Repositories\\Frontend\\wwwroot\\libs\\font-awesome\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\libs\\font-awesome\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "D:\\Git Repositories\\Frontend\\wwwroot\\libs\\font-awesome\\webfonts\\fa-v4compatibility.ttf",
+      "PackagePath": "staticwebassets\\libs\\font-awesome\\webfonts\\fa-v4compatibility.ttf"
+    },
+    {
+      "Id": "D:\\Git Repositories\\Frontend\\wwwroot\\libs\\font-awesome\\webfonts\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\libs\\font-awesome\\webfonts\\fa-v4compatibility.woff2"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Frontend.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Frontend.props",
+      "PackagePath": "build\\Frontend.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Frontend.props",
+      "PackagePath": "buildMultiTargeting\\Frontend.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Frontend.props",
+      "PackagePath": "buildTransitive\\Frontend.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
