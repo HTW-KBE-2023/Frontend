@@ -39,8 +39,8 @@ namespace Frontend.Shared
         {
             var menus = new List<MenuItem>
         {
-            new MenuItem() { Text = "Index", Icon = "fa-solid fa-fw fa-flag", Url = "/" , Match = NavLinkMatch.All},
-            new MenuItem() { Text = "RPG-Bot", Icon = "fa-solid fa-fw fa-check-square", Url = "/rpg" },
+            new MenuItem() { Text = "Startseite", Icon = "fa-solid fa-fw fa-house", Url = "/" , Match = NavLinkMatch.All},
+            new MenuItem() { Text = "RPG-Bot", Icon = "fa-solid fa-fw fa-dragon", Url = "/rpg" },
         };
 
             return menus;
