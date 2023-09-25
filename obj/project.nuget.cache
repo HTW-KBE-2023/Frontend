@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dM/fFnvrYaSPb/YKAS/bapjIjwKGJcTb+gaYvV4LdmkiD9LcM0S4W3iQma1ctY/V3PWPbcaZh4hXGRbGMOD2Dg==",
+  "dgSpecHash": "mzTF9240NMfcLvqMdPkLi46jfAMn+5Gsei5SppBSK3ifb/8WyUTNJzW9oQSIcbsTX0hFddzUhgJRqJSXAEhZhw==",
   "success": true,
   "projectFilePath": "D:\\Git Repositories\\Frontend\\Frontend.csproj",
   "expectedPackageFiles": [
@@ -34,6 +34,7 @@
     "C:\\Users\\Roody\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\7.0.0\\microsoft.extensions.options.configurationextensions.7.0.0.nupkg.sha512",
     "C:\\Users\\Roody\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\Roody\\.nuget\\packages\\microsoft.jsinterop\\7.0.0\\microsoft.jsinterop.7.0.0.nupkg.sha512",
+    "C:\\Users\\Roody\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.18.1\\microsoft.visualstudio.azure.containers.tools.targets.1.18.1.nupkg.sha512",
     "C:\\Users\\Roody\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
     "C:\\Users\\Roody\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
     "C:\\Users\\Roody\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512"
