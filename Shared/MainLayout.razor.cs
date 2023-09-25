@@ -41,6 +41,7 @@ namespace Frontend.Shared
         {
             new MenuItem() { Text = "Startseite", Icon = "fa-solid fa-fw fa-house", Url = "/" , Match = NavLinkMatch.All},
             new MenuItem() { Text = "RPG-Bot", Icon = "fa-solid fa-fw fa-dragon", Url = "/rpg" },
+            new MenuItem() { Text = "Umfrage", Icon = "fa-solid fa-fw fa-square-poll-vertical", Url = "/poll" },
         };
 
             return menus;

@@ -1,0 +1,181 @@
+﻿@page "/poll"
+@using System.Diagnostics
+@using Frontend.Shared
+@using System.Text.Json
+@using BootstrapBlazor.Components
+@using System.Diagnostics.CodeAnalysis
+@using Microsoft.Extensions.Localization
+@inject IJSRuntime JSRuntime
+
+<PageTitle>Discord Umfrage</PageTitle>
+
+<h1>Discord Umfrage</h1>
+
+<EditForm Model="Model">
+    <div class="row">
+        <div class="col-sm">
+            <label>Textchannel:</label>
+            <select class="form-control" @onchange="@OnSelect" style="width: 400px">
+                @foreach (var template in templates)
+                {
+                    <option value=@template>@template</option>
+                }
+            </select>
+            <h6>Ausgewählter Textchannel: @selectedString</h6>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-sm">
+            <label>Titel der Umfrage:</label>
+            <br />
+            <input type="text" @bind="title" placeholder="Bitte Titel eintragen..." style="width: 400px" />
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-sm">
+            <label>Beschreibung der Umfrage:</label>
+            <br />
+            <textarea @bind="@descText" rows="6" style="width: 400px; resize: none;" placeholder="Bitte Text eintragen..." />
+        </div>
+    </div>
+    <br />
+    <label>Anzahl der Antworten:</label>
+    <br />
+    <input type="number" @bind="numericValue" min="2" max="8" />
+    <br />
+    <label>Antworten:</label>
+    <br />
+    @foreach (var i in Enumerable.Range(0, 8))
+    {
+        answerTextFields.Add(String.Empty);
+        <input type="text" itemref="" @bind="answerTextFields[i]" placeholder="Antwort Nr.@(i + 1)" style="display: @(GetDisplayStyleAnswer(i)); width: 400px" />
+    }
+    <br />
+    <br />
+    <label>Deadline:</label>
+    <Switch @bind-Value="deadlineToggle" OnColor="Color.Success" OffColor="Color.Danger" OnText="Aktiviert" OffText="Deaktiviert"></Switch>
+
+    <InputDate TValue="DateTime" @bind-Value="dateTime" style="@GetDisplayStyleDeadline(deadlineToggle)" />
+    <br />
+    <br />
+    <button type="submit" @onclick="SendPollInformation">Senden</button>
+</EditForm>
+
+<div style="margin-top: 50px">
+    <p><b>Erklärung der Schaltflächen</b></p>
+    <ul class="ul-descr mb-3">
+        <li>Der <code>Textchannel</code> legt fest wo auf deinem Server die Umfrage gepostet wird.</li>
+        <li>Der <code>Titel</code> legt eine Überschrift für deine Umfrage fest (z.B. als Einleitung).</li>
+        <li>Die <code>Textbox</code> dient dazu deiner Umfrage einen Kontext zu liefern (z.B. warum und für was wird abgestimmt?).</li>
+        <li>Die <code>Antwortanzahl</code> legt die Anzahl zwischen mindestens zwei bis zu maximal zehn Antwortmöglichkeiten fest!</li>
+        <li>Die <code>Textboxen für deine Antworten</code> dienen dazu deine Punkte nieder zu schreiben für die abgestimmt werden sollen.</li>
+        <li>Die <code>Deadline</code> ist optional. Falls du einen Zeitraum für deine Abstimmung einrichten möchtest kannst du diese über den Switch de- oder aktivieren.</li>
+        <li>Bei Aktivierung der Deadline kannst du über die <code>Datumsauswahl</code> deinen Zeitpunkt aussuchen bis wann die Umfrage stattfinden soll. Beim Posten der Umfrage läuft dann ein aktiver Timer runter, den alle Nutzer auf deinem Server einsehen können.</li>
+        <li>Der <code>Absenden</code> Button postet eure Umfrage, sofern alle nötigen Felder korrekt ausgefüllt wurden.</li>
+    </ul>
+    <p><b>Voraussetzungen:</b></p>
+    <ul class="ul-demo mb-3">
+        <li>Das Ausfüllen der Felder ist Pflicht!</li>
+        <li>Mindestens zwei bis zu maximal 8 Antwortmöglichkeiten!</li>
+        <li>Die Deadline ist optional!</li>
+    </ul>
+</div>
+
+
+@code {
+    private Foo Model { get; set; } = new Foo();
+
+    [NotNull]
+    private List<Foo>? Foos { get; set; }
+
+    [Inject]
+    [NotNull]
+    private IStringLocalizer<Foo>? LocalizerFoo { get; set; }
+
+    private ElementReference myInput;
+
+    private string? title { get; set; }
+    private string? descText { get; set; }
+    private int numericValue = 2;
+    private List<string> answerTextFields = new List<string>();
+    private DateTime dateTime = new DateTime();
+
+    List<string> templates = new List<string>() { "#chat", "#umfrage", "ankuendigungen" };
+    string selectedString = "#chat";
+
+    private bool deadlineToggle = false;
+    /*
+    private void ChangeDeadlineStatus()
+    {
+        deadlineToggle = !deadlineToggle;
+    }
+    */
+
+    void OnSelect(ChangeEventArgs e)
+    {
+        selectedString = e.Value.ToString();
+        Debug.WriteLine("The selected country is : " + selectedString);
+    }
+
+    private string GetDisplayStyleAnswer(int index)
+    {
+        return index >= numericValue ? "none" : "block";
+    }
+
+    private string GetDisplayStyleDeadline(bool status)
+    {
+        return status == false ? "display: none" : "display: block";
+    }
+
+    
+    private async Task SendPollInformation()
+    {
+        /* NOTE: alter Quellcode zum Auslesen von Antworten, funktionierte nicht
+        for (int i = 0; i < numericValue; i++)
+        {
+            var input = await JSRuntime.InvokeAsync<IJSObjectReference>("eval", $"document.querySelector('input[type=text]:nth-child({i + 1})')");
+            if (input != null)
+            {
+                var value = await input.InvokeAsync<string>("getAttribute", "value");
+                answerTextFields.Add(value);
+            }
+        }
+        */
+    }
+
+    // ---- ALLES FÜR FOO MODEL
+    [NotNull]
+    private ConsoleLogger? Logger1 { get; set; }
+
+    private async Task OnInvalidSubmit1(EditContext context)
+    {
+        await Task.Delay(1000);
+        Logger1.Log("OnInvalidSubmit callback delegate: The validation failed");
+    }
+
+    private async Task OnValidSubmit1(EditContext context)
+    {
+        await Task.Delay(1000);
+        Logger1.Log("OnValidSubmit callback delegate: Verification passed");
+    }
+
+    private void OnFiledChanged(string field, object? value)
+    {
+        Logger1.Log($"{field}:{value}");
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Yield();
+
+        Model = new() { Name = "Name", Education = EnumEducation.Primary, DateTime = DateTime.Now };
+        dateTime = DateTime.Now;
+    }
+
+    protected override void OnInitialized()
+    {
+        Foos = Foo.GenerateFoo(LocalizerFoo);
+    }
+}
