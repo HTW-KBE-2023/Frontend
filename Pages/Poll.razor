@@ -32,7 +32,7 @@
         <div class="col-sm">
             <label for="titleinput">Titel der Umfrage:</label>
             <br />
-            <input type="text" @bind="title" placeholder="Bitte Titel eintragen..." style="width: 400px" id="titleinput"/>
+            <input type="text" @bind="Title" placeholder="Bitte Titel eintragen..." style="width: 400px" id="titleinput"/>
         </div>
     </div>
     <br />
@@ -40,7 +40,7 @@
         <div class="col-sm">
             <label for="textpoll">Beschreibung der Umfrage:</label>
             <br />
-            <textarea @bind="@descText" rows="6" style="width: 400px; resize: none;" placeholder="Bitte Text eintragen..." id="textpoll"/>
+            <textarea @bind="@DescText" rows="6" style="width: 400px; resize: none;" placeholder="Bitte Text eintragen..." id="textpoll"/>
         </div>
     </div>
     <br />
@@ -99,8 +99,8 @@
 
     private ElementReference myInput;
 
-    private string? title { get; set; }
-    private string? descText { get; set; }
+    private string? Title { get; set; }
+    private string? DescText { get; set; }
     private int numericValue = 2;
     private List<string> answerTextFields = new List<string>();
     private DateTime dateTime = new DateTime();
@@ -109,12 +109,6 @@
     string selectedString = "#chat";
 
     private bool deadlineToggle = false;
-    /*
-    private void ChangeDeadlineStatus()
-    {
-        deadlineToggle = !deadlineToggle;
-    }
-    */
 
     void OnSelect(ChangeEventArgs e)
     {
