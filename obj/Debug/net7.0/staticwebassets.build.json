@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0V9w5/p2+FnSs9XqdrlMHXMZ/rgMXejgb5FN1fds5nw=",
+  "Hash": "XTN2Ig3zvVp8Pf+vPlIB3NzNYrPEUA8tooTkRvP8F+A=",
   "Source": "Frontend",
   "BasePath": "_content/Frontend",
   "Mode": "Default",
@@ -1358,6 +1358,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Roody\\.nuget\\packages\\bootstrapblazor\\7.10.7\\staticwebassets\\modules\\viewer.js"
+    },
+    {
+      "Identity": "C:\\Users\\Roody\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\7.0.11\\staticwebassets\\AuthenticationService.js",
+      "SourceId": "Microsoft.AspNetCore.Components.WebAssembly.Authentication",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\Roody\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\7.0.11\\staticwebassets\\",
+      "BasePath": "_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication",
+      "RelativePath": "AuthenticationService.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Roody\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\7.0.11\\staticwebassets\\AuthenticationService.js"
     },
     {
       "Identity": "D:\\Git Repositories\\Frontend\\wwwroot\\css\\motronic.css",
